@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  ros2_basic:
+    container_name: ros2_basic
+    build:
+      context: .
+      args:
+        - USER_NAME=${USER_NAME}
+        - GROUP_NAME=${GROUP_NAME}
+        - PASSWORD=${PASSWORD}
+        - UID=${UID}
+        - GID=${GID}
+        - GIT_USER_NAME=${GIT_USER_NAME}
+        - GIT_USER_EMAIL=${GIT_USER_EMAIL}
+      dockerfile: Dockerfile
+    image: n622jwith/ros2_basic:latest
+    hostname: ros2_basic
+    tty: true
+    user: "${UID}:${GID}"
