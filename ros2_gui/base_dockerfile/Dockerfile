@@ -20,6 +20,11 @@ RUN apt-get update &&\
     apt-get install -y ignition-fortress &&\
     rm -rf /var/lib/apt/lists/*
 
+# install ros-gazebo-bridge
+RUN apt-get update &&\
+    apt-get install -y ros-humble-ros-ign &&\
+    rm -rf /var/lib/apt/lists/*
+
 # install slamtoolbox
 RUN apt-get update &&\
     apt-get install -y ros-humble-slam-toolbox &&\
