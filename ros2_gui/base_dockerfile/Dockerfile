@@ -19,14 +19,3 @@ RUN apt-get update &&\
     apt-get update &&\
     apt-get install -y ignition-fortress &&\
     rm -rf /var/lib/apt/lists/*
-
-# install slamtoolbox
-RUN apt-get update &&\
-    apt-get install -y ros-humble-slam-toolbox &&\
-    rm -rf /var/lib/apt/lists/*
-
-# install nav2
-RUN apt-get update &&\
-    apt-get install -y ros-humble-navigation2 &&\
-    apt-get install -y ros-humble-nav2-bringup &&\
-    rm -rf /var/lib/apt/lists/*
